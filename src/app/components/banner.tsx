@@ -26,6 +26,7 @@ const Banner = () => {
       <video
         src="/video.mp4"
         autoPlay
+        loop
         muted
         className="h-[644px] object-cover absolute sm:h-[718px] sm:w-full"
       />

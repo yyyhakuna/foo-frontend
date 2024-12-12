@@ -1,9 +1,15 @@
+"use client";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import Image from "next/image";
 import React from "react";
 import HeaderSelect from "./header-select";
+import { WiDaySunny } from "react-icons/wi";
+import { useAccount } from "wagmi";
 
 const Header = () => {
+  const account = useAccount();
+  console.log(account);
+
   return (
     <div className="p-4 justify-between bg-black flex">
       <div className="flex gap-3 items-center">
@@ -62,7 +68,16 @@ const Header = () => {
           />
         </div>
       </div>
-      <div className="flex gap-3 items-center">
+      <div className="flex gap-3 items-center sm:gap-4">
+        {account.address && (
+          <div className="flex gap-1">
+            <button>
+              <img src="/faucet.png" className="size-6 hidden sm:block" />
+            </button>
+            <div className="hidden sm:block text-default-700">08:00:00</div>
+          </div>
+        )}
+        <WiDaySunny className="hidden sm:block text-default-700 size-6" />
         <ConnectButton />
         <Image
           src="/headerMeun.png"

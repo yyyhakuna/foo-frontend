@@ -1,18 +1,26 @@
 import React from "react";
-
+import { FaXTwitter } from "react-icons/fa6";
+import { FaDiscord } from "react-icons/fa";
+import { BiLogoTelegram } from "react-icons/bi";
+import { FaMedium } from "react-icons/fa6";
+import { SiGitbook } from "react-icons/si";
 interface ItemProps {
-  img: string;
+  img: React.ReactNode;
   title: string;
 }
 
 const Item: React.FC<ItemProps> = ({ img, title }) => {
   return (
     <div className="border border-default-100 rounded-xl p-3 sm:py-[10px] flex items-center justify-center w-12 h-12 sm:gap-3 group sm:w-auto">
-      <img
-        src={img}
-        className="sm:group-hover: text-banner-blue"
-        style={{ filter: "hue-rotate(180deg)" }}
-      />
+      {typeof img === "string" ? (
+        <img
+          src={img}
+          className="sm:group-hover: text-banner-blue"
+          style={{ filter: "hue-rotate(180deg)" }}
+        />
+      ) : (
+        img
+      )}
       <div className="text-[16px] sm:group-hover:text-banner-blue text-default-500 hidden sm:block">
         {title}
       </div>
@@ -36,11 +44,36 @@ const Contact = () => {
           </div>
         </div>
         <div className="flex gap-4">
-          <Item img="/twitter.png" title="Twitter" />
-          <Item img="/discord.png" title="Discord" />
-          <Item img="/telegram.png" title="Telegram" />
-          <Item img="/medium.png" title="Medium" />
-          <Item img="/gitbook.png" title="GitBook" />
+          <Item
+            img={
+              <FaXTwitter className="group-hover:text-banner-blue size-8 text-default-500" />
+            }
+            title="Twitter"
+          />
+          <Item
+            img={
+              <FaDiscord className="group-hover:text-banner-blue size-8 text-default-500" />
+            }
+            title="Discord"
+          />
+          <Item
+            img={
+              <BiLogoTelegram className="group-hover:text-banner-blue size-8 text-default-500" />
+            }
+            title="Telegram"
+          />
+          <Item
+            img={
+              <FaMedium className="group-hover:text-banner-blue size-8 text-default-500" />
+            }
+            title="Medium"
+          />
+          <Item
+            img={
+              <SiGitbook className="group-hover:text-banner-blue size-8 text-default-500" />
+            }
+            title="GitBook"
+          />
         </div>
       </div>
       <div className="space-y-6 px-4 sm:space-y-8 sm:w-full sm:px-0">

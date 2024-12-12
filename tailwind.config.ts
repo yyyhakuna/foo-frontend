@@ -10,6 +10,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        "default-700": "hsl(240 5% 65%)",
         "default-600": "hsl(240 5% 84%)",
         "default-500": "hsl(240 4% 46%)",
         "default-400": "hsl(250 4% 46%)",

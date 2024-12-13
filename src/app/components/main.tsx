@@ -97,7 +97,7 @@ const Main = () => {
         </div>
       </div>
       <div className="space-y-8 ">
-        <div className="mt-20 space-y-4 sm:flex sm:space-y-0 sm:mt-[60px] sm:gap-8">
+        <div className="mt-20 space-y-4 sm:px-8 sm:flex sm:space-y-0 sm:mt-[60px] sm:gap-8">
           <CardItem
             desc="Permissionless listing allows any project or asset to be listed on the platform without requiring prior approval or authorization. This feature promotes a decentralized and open environment, where anyone can introduce new assets, enabling greater innovation and inclusivity within the marketplace."
             title="PermissionLess Listing"

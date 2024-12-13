@@ -77,7 +77,9 @@ const Header = () => {
             <div className="hidden sm:block text-default-700">08:00:00</div>
           </div>
         )}
-        <WiDaySunny className="hidden sm:block text-default-700 size-6" />
+        <button>
+          <WiDaySunny className="hidden sm:block text-default-700 size-6" />
+        </button>
         <ConnectButton label="Connect" />
         <Image
           src="/headerMeun.png"

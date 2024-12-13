@@ -10,7 +10,7 @@ interface ItemProps {
 
 const Item: React.FC<ItemProps> = ({ title, desc }) => {
   return (
-    <div className="space-y-1 px-4 z-50 mt-3 sm:space-y-8 sm:px-6 sm:py-4 sm:mt-0 sm:w-[306px]">
+    <div className="space-y-1 px-4 z-50 mt-3 sm:space-y-8 sm:px-6 sm:py-4 sm:mt-0 sm:w-[23%]">
       <div className="text-default-400 body-lg sm:text-[14px]">{title}</div>
       <div className="body-3xl text-neutral-white sm:text-[32px] sm:font-semibold">
         {desc}

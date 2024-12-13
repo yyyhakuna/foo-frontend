@@ -1,12 +1,10 @@
 import Image from "next/image";
 import React from "react";
-import cn from "clsx";
 
 interface CardItemProps {
   imageSrc: string;
   title: string;
   desc: string;
-  imgHight: number;
 }
 
 interface ItemProps {
@@ -17,19 +15,14 @@ interface ItemProps {
   dir?: string;
 }
 
-const CardItem: React.FC<CardItemProps> = ({
-  imageSrc,
-  title,
-  desc,
-  imgHight,
-}) => {
+const CardItem: React.FC<CardItemProps> = ({ imageSrc, title, desc }) => {
   return (
-    <div className="space-y-4 border-border-color border rounded-xl px-6 py-8 sm:bg-default-50 sm:bg-opacity-40 sm:group sm:w-full h-[510px] sm:flex sm:flex-col sm:p-10 z-50">
-      <div className="sm:flex-1 sm:flex items-center justify-center flex-grow">
+    <div className="space-y-4 border-border-color border rounded-xl px-6 py-8 sm:bg-default-50 sm:bg-opacity-40 group sm:w-full sm:h-[510px] sm:flex sm:flex-col sm:p-10 z-50">
+      <div className="sm:flex-1 flex items-center justify-center ">
         <img
           src={imageSrc}
           alt="image"
-          className={cn(` m-auto h-[${imgHight}px]`)}
+          className="object-cover m-auto max-h-[220px]"
         />
       </div>
       <div className="text-neutral-white text-2xl text-center leading-[25.56px] w-[181px] m-auto sm:text-[24px] sm:flex sm:justify-between sm:w-full sm:items-center sm:text-left">
@@ -105,65 +98,21 @@ const Main = () => {
       </div>
       <div className="space-y-8 ">
         <div className="mt-20 space-y-4 sm:px-8 sm:flex sm:space-y-0 sm:mt-[60px] sm:gap-8">
-          <div className="space-y-4 border-border-color border rounded-xl px-6 py-8 sm:bg-default-50 sm:bg-opacity-40 sm:group sm:w-full h-[510px] sm:flex sm:flex-col sm:p-10 z-50">
-            <div className="sm:flex-1 sm:flex items-center justify-center flex-grow">
-              <img
-                src={"/crypto.png"}
-                alt="image"
-                className={cn(` m-auto h-[236px]`)}
-              />
-            </div>
-            <div className="text-neutral-white text-2xl text-center leading-[25.56px] w-[181px] m-auto sm:text-[24px] sm:flex sm:justify-between sm:w-full sm:items-center sm:text-left">
-              PermissionLess Listing
-              <img src="/card-meun.png" className="hidden sm:block" />
-            </div>
-            <div className="text-default-300 body-2xl text-center leading-[18px] m-auto sm:hidden sm:group-hover:block sm:text-left">
-              Permissionless listing allows any project or asset to be listed on
-              the platform without requiring prior approval or authorization.
-              This feature promotes a decentralized and open environment, where
-              anyone can introduce new assets, enabling greater innovation and
-              inclusivity within the marketplace.
-            </div>
-          </div>
-          <div className="space-y-4 border-border-color border rounded-xl px-6 py-8 sm:bg-default-50 sm:bg-opacity-40 sm:group sm:w-full h-[510px] sm:flex sm:flex-col sm:p-10 z-50">
-            <div className="sm:flex-1 sm:flex items-center justify-center flex-grow">
-              <img
-                src="/trading.png"
-                alt="image"
-                className={cn(` m-auto h-[280px]`)}
-              />
-            </div>
-            <div className="text-neutral-white text-2xl text-center leading-[25.56px] w-[181px] m-auto sm:text-[24px] sm:flex sm:justify-between sm:w-full sm:items-center sm:text-left">
-              Copytrading
-              <img src="/card-meun.png" className="hidden sm:block" />
-            </div>
-            <div className="text-default-300 body-2xl text-center leading-[18px] m-auto sm:hidden sm:group-hover:block sm:text-left">
-              Copytrading enables users to mirror the trades of more experienced
-              or successful traders. By simply following a trader’s strategy,
-              novice or less active users can participate in the market with
-              minimal effort, potentially benefiting from the expertise of top
-              traders.
-            </div>
-          </div>
-          <div className="space-y-4 border-border-color border rounded-xl px-6 py-8 sm:bg-default-50 sm:bg-opacity-40 sm:group sm:w-full h-[510px] sm:flex sm:flex-col sm:p-10 z-50">
-            <div className="sm:flex-1 sm:flex items-center justify-center flex-grow">
-              <img
-                src="/manage.png"
-                alt="image"
-                className={cn(` m-auto h-[254px]`)}
-              />
-            </div>
-            <div className="text-neutral-white text-2xl text-center leading-[25.56px] w-[181px] m-auto sm:text-[24px] sm:flex sm:justify-between sm:w-full sm:items-center sm:text-left">
-              Fund Manager Model
-              <img src="/card-meun.png" className="hidden sm:block" />
-            </div>
-            <div className="text-default-300 body-2xl text-center leading-[18px] m-auto sm:hidden sm:group-hover:block sm:text-left">
-              The fund manager model allows professional managers to oversee and
-              manage pools of capital for other investors. Users can choose to
-              invest in a fund managed by an expert, with the manager handling
-              all aspects of trading and investment decisions.
-            </div>
-          </div>
+          <CardItem
+            desc="Permissionless listing allows any project or asset to be listed on the platform without requiring prior approval or authorization. This feature promotes a decentralized and open environment, where anyone can introduce new assets, enabling greater innovation and inclusivity within the marketplace."
+            title="PermissionLess Listing"
+            imageSrc="/crypto.png"
+          />
+          <CardItem
+            desc="Copytrading enables users to mirror the trades of more experienced or successful traders. By simply following a trader’s strategy, novice or less active users can participate in the market with minimal effort, potentially benefiting from the expertise of top traders."
+            title="Copytrading"
+            imageSrc="/trading.png"
+          />
+          <CardItem
+            desc="The fund manager model allows professional managers to oversee and manage pools of capital for other investors. Users can choose to invest in a fund managed by an expert, with the manager handling all aspects of trading and investment decisions."
+            title="Fund Manager Model"
+            imageSrc="/manage.png"
+          />
           <img
             src="/main-right-bg.png"
             className="absolute right-[-260px] top-[260px] h-[500px]"

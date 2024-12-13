@@ -33,12 +33,8 @@ const Contact = () => {
     <div className="space-y-8 bg-black pt-[100px] pb-4 sm:pb-10 sm:px-[92px] sm:pt-[120px]">
       <div className=" flex justify-center sm:justify-between sm:items-center">
         <div className="hidden sm:block">
-          <div className="flex gap-3">
-            <img
-              src="/favicon.ico"
-              alt="logo"
-              className="object-cover size-8"
-            />
+          <div className="flex gap-3 items-center">
+            <img src="/favicon.ico" alt="logo" className=" size-8" />
             <img src="/foo.png" alt="logo" className="w-[56px]" />
           </div>
           <div className="mt-4">

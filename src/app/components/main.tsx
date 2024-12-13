@@ -80,13 +80,14 @@ const Item: React.FC<ItemProps> = ({
 
 const Main = () => {
   return (
-    <div className="pt-20 pb-20 px-4 bg-black sm:px-[60px]">
+    <div className="pt-20 pb-20 px-4 bg-black sm:px-[60px] relative overflow-hidden sm:pt-[100px]">
+      <img src="/main-left-bg.png" className="absolute -mt-[150px] h-[800px]" />
       <div className="space-y-4 sm:space-y-8">
-        <div className="title-1 text-center text-neutral-white sm:text-[128px] h-[100px]">
-          Foo
+        <div className="title-1 text-center text-neutral-white sm:text-[128px] sm:h-[100px]">
+          FOO
         </div>
         <div className="">
-          <div className="body-2xl text-center text-default-600 w-[279px] m-auto sm:font-[20px] sm:w-full tracking-[2%]">
+          <div className="body-2xl text-center text-default-600 w-[279px] m-auto sm:font-[20px] sm:w-full">
             Your Foo DeFi hub, masterfully harnessing berachain ’s core to
             amplify yield strategies.
           </div>
@@ -95,7 +96,7 @@ const Main = () => {
           </div>
         </div>
       </div>
-      <div className="space-y-8">
+      <div className="space-y-8 ">
         <div className="mt-20 space-y-4 sm:flex sm:space-y-0 sm:mt-[60px] sm:gap-8">
           <CardItem
             desc="Permissionless listing allows any project or asset to be listed on the platform without requiring prior approval or authorization. This feature promotes a decentralized and open environment, where anyone can introduce new assets, enabling greater innovation and inclusivity within the marketplace."
@@ -112,8 +113,16 @@ const Main = () => {
             title="Fund Manager Model"
             imageSrc="/manage.png"
           />
+          <img
+            src="/main-right-bg.png"
+            className="absolute right-[-260px] top-[260px] h-[500px]"
+          />
         </div>
         <div className="space-y-4">
+          <img
+            src="/main-pig-bg.png"
+            className="absolute h-[500px] left-[160px] mt-[100px]"
+          />
           <Item
             title={
               <div className="text-neutral-white">

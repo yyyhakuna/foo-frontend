@@ -78,7 +78,7 @@ const Contact = () => {
       </div>
       <div className="space-y-6 px-4 sm:space-y-8 sm:w-full sm:px-0">
         <div className="sm:hidden">
-          <div className="flex gap-3 justify-center">
+          <div className="flex gap-3 place-items-center justify-center">
             <img
               src="/favicon.ico"
               alt="logo"

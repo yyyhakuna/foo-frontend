@@ -34,8 +34,12 @@ const Contact = () => {
       <div className=" flex justify-center sm:justify-between sm:items-center">
         <div className="hidden sm:block">
           <div className="flex gap-3">
-            <img src="/headerLogo.png" alt="logo" className="object-cover" />
-            <img src="/headerFoo.png" alt="logo" className="" />
+            <img
+              src="/favicon.ico"
+              alt="logo"
+              className="object-cover size-8"
+            />
+            <img src="/foo.png" alt="logo" className="w-[56px]" />
           </div>
           <div className="mt-4">
             <div className="text-default-500 text-[14px] text-center">
@@ -79,12 +83,16 @@ const Contact = () => {
       <div className="space-y-6 px-4 sm:space-y-8 sm:w-full sm:px-0">
         <div className="sm:hidden">
           <div className="flex gap-3 justify-center">
-            <img src="/headerLogo.png" alt="logo" className="object-cover" />
-            <img src="/headerFoo.png" alt="logo" className="" />
+            <img
+              src="/favicon.ico"
+              alt="logo"
+              className="object-cover size-8"
+            />
+            <img src="/foo.png" alt="logo" className="w-[56px]" />
           </div>
           <div className="mt-4">
             <div className="text-default-500 text-[14px] text-center">
-              Your Foo DeFi hub{" "}
+              Your Foo DeFi hub
             </div>
             <div className="text-default-500 text-[14px] text-center">
               for maximized yield based on BeraChain.

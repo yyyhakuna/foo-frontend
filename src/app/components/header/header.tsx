@@ -13,8 +13,8 @@ const Header = () => {
   return (
     <div className="p-4 justify-between bg-black flex">
       <div className="flex gap-3 items-center">
-        <img src="/headerLogo.png" alt="logo" className="object-cover" />
-        <img src="/headerFoo.png" alt="logo" className="object-cover" />
+        <img src="/favicon.ico" alt="logo" className="object-cover size-8" />
+        <img src="/foo.png" alt="logo" className="object-cover w-[56px]" />
         <div className="ml-12  gap-9 hidden sm:flex">
           <button className="text-[16px] font-medium text-foreground-100">
             Trade

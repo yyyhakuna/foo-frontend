@@ -1,6 +1,8 @@
 "use client";
 import { cn } from "@/app/utils";
 import React, { useState, useEffect, useRef } from "react";
+import { IoIosArrowUp } from "react-icons/io";
+import { IoIosArrowDown } from "react-icons/io";
 
 interface Option {
   title: string;
@@ -44,15 +46,11 @@ const HeaderSelect: React.FC<HeaderSelectProps> = ({ options, title }) => {
         className="text-[16px] font-medium text-foreground-100 flex gap-1 items-center"
       >
         {title}
-        <img
-          src="/arrow-down.png"
-          alt="arrow"
-          className={cn("text-foreground-100", showList && "hidden")}
+        <IoIosArrowDown
+          className={cn("text-foreground-100 size-4", showList && "hidden")}
         />
-        <img
-          src="/arrow-up.png"
-          alt="arrow"
-          className={cn("text-foreground-100", !showList && "hidden")}
+        <IoIosArrowUp
+          className={cn("text-foreground-100 size-4", !showList && "hidden")}
         />
       </button>
       {showList && (

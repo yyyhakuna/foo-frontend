@@ -30,7 +30,9 @@ const options: OptionProp[] = [
 export default function RoadMap() {
   return (
     <div className="bg-black sm:px-[60px] sm:py-20 px-4 relative h-[453px] sm:h-[720px] ">
-      <div className="text-neutral-white text-[40px] font-black ">RoadMap</div>
+      <div className="text-neutral-white text-[40px] font-black sm:text-[64px]">
+        RoadMap
+      </div>
       <img
         src="/points-map.png"
         className="object-cover h-[393px] w-[calc(100%-32px)] sm:h-[500px] sm:w-[calc(100%-120px)] absolute"

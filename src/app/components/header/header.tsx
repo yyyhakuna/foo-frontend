@@ -78,7 +78,7 @@ const Header = () => {
           </div>
         )}
         <WiDaySunny className="hidden sm:block text-default-700 size-6" />
-        <ConnectButton />
+        <ConnectButton label="Connect" />
         <Image
           src="/headerMeun.png"
           alt="logo"

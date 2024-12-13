@@ -46,31 +46,31 @@ const Contact = () => {
         <div className="flex gap-4">
           <Item
             img={
-              <FaXTwitter className="group-hover:text-banner-blue size-8 text-default-500" />
+              <FaXTwitter className="group-hover:text-banner-blue w-[20px] h-[18px] text-default-500" />
             }
             title="Twitter"
           />
           <Item
             img={
-              <FaDiscord className="group-hover:text-banner-blue size-8 text-default-500" />
+              <FaDiscord className="group-hover:text-banner-blue w-[20px] h-[18px] text-default-500" />
             }
             title="Discord"
           />
           <Item
             img={
-              <BiLogoTelegram className="group-hover:text-banner-blue size-8 text-default-500" />
+              <BiLogoTelegram className="group-hover:text-banner-blue w-[20px] h-[18px] text-default-500" />
             }
             title="Telegram"
           />
           <Item
             img={
-              <FaMedium className="group-hover:text-banner-blue size-8 text-default-500" />
+              <FaMedium className="group-hover:text-banner-blue w-[20px] h-[18px] text-default-500" />
             }
             title="Medium"
           />
           <Item
             img={
-              <SiGitbook className="group-hover:text-banner-blue size-8 text-default-500" />
+              <SiGitbook className="group-hover:text-banner-blue w-[20px] h-[18px] text-default-500" />
             }
             title="GitBook"
           />
